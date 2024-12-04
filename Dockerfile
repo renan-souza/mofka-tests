@@ -37,7 +37,7 @@ RUN . /spack/share/spack/setup-env.sh && \
     spack external find && \
     spack env create mochi && \
     spack env activate mochi && \
-    spack add mofka@main+python+mpi ^mochi-bedrock~ssg ^mpich@3.4 ^mercury~boostsys~checksum ^libfabric@1.19.1 ^json-c@0.13.0 %gcc@13 && \
+    spack add mofka@main+python+mpi ^mochi-bedrock ^mpich@3.4 ^mercury~boostsys~checksum ^libfabric@1.19.1 ^json-c@0.13.0 %gcc@13 && \
     spack add mochi-margo ^mercury~boostsys~checksum ^libfabric@1.19.1 ^json-c@0.13.0 && \
     spack concretize -f --fresh && \
     spack env depfile -o Makefile.env && \
